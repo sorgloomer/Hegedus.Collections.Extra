@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Hegedus.Extra.Collections.Collections;
 
-namespace Hegedus.Extra.Collections.Collections
+namespace Hegedus.Extra.Collections.Tuples
 {
-    public static partial class OrderedDictionary
+    public static class TupleOrderedDictionary
     {
         public static OrderedDictionary<K, V> Of<K, V>(params (K, V)[] items)
         {

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using Xunit;
 
 namespace Hegedus.Extra.Collections.Test
@@ -49,6 +46,8 @@ namespace Hegedus.Extra.Collections.Test
                 new []{ 3, 4, 5, 6 },
                 new []{ 7, 8, 9 },
             }.Zip().ToArray();
+
+            Assert.Equal(zipped.Length, 3);
 
             Assert.Equal(zipped[0][0], 0);
             Assert.Equal(zipped[0][1], 3);
