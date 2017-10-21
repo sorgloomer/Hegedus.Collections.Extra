@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2005
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hegedus.Extra.Collections", "Hegedus.Collections.Extra\Hegedus.Extra.Collections.csproj", "{D59BCDEE-706C-44A5-AD35-F1BD517098F8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hegedus.Extra.Collections.Test", "Hegedus.Collections.Extra.Test\Hegedus.Extra.Collections.Test.csproj", "{6090BB02-16E6-4DC4-BF01-2835D6E990CD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D59BCDEE-706C-44A5-AD35-F1BD517098F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D59BCDEE-706C-44A5-AD35-F1BD517098F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D59BCDEE-706C-44A5-AD35-F1BD517098F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D59BCDEE-706C-44A5-AD35-F1BD517098F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6090BB02-16E6-4DC4-BF01-2835D6E990CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6090BB02-16E6-4DC4-BF01-2835D6E990CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6090BB02-16E6-4DC4-BF01-2835D6E990CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6090BB02-16E6-4DC4-BF01-2835D6E990CD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1BB3703-D3AE-4D5B-80E1-D1508B12522D}
+	EndGlobalSection
+EndGlobal
