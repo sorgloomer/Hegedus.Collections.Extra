@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Hegedus.Extra.Collections
 {
-    public struct Optional<T> : IEnumerable<T>, IEquatable<Optional<T>>, IComparable<Optional<T>>
+    public struct Optional<T> : ICollection<T>, IReadOnlyCollection<T>, IEnumerable<T>, IEquatable<Optional<T>>, IComparable<Optional<T>>
     {
         internal readonly bool _hasValue;
         internal readonly T _value;
@@ -29,6 +29,10 @@ namespace Hegedus.Extra.Collections
                 return (_hasValue && (_value != null)) ? this : None;
             }
         }
+
+        public int Count => _hasValue ? 1 : 0;
+
+        public bool IsReadOnly => true;
 
         public Optional(T value)
         {
@@ -95,6 +99,31 @@ namespace Hegedus.Extra.Collections
         public static Optional<T> Some(T value)
         {
             return new Optional<T>(value);
+        }
+
+        void ICollection<T>.Add(T item)
+        {
+            throw new NotImplementedException();
+        }
+
+        void ICollection<T>.Clear()
+        {
+            throw new NotImplementedException();
+        }
+
+        public bool Contains(T item)
+        {
+            return _hasValue && EqualityComparer<T>.Default.Equals(item, _value);
+        }
+
+        void ICollection<T>.CopyTo(T[] array, int arrayIndex)
+        {
+            throw new NotImplementedException();
+        }
+
+        bool ICollection<T>.Remove(T item)
+        {
+            throw new NotImplementedException();
         }
 
         public static explicit operator T(Optional<T> optional)

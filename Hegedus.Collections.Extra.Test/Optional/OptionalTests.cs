@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
@@ -214,10 +215,36 @@ namespace Hegedus.Extra.Collections.Test
         [Fact]
         public void TestToString()
         {
-            Assert.Equal(Optional<long>.None.ToString(), "None");
-            Assert.Equal(Optional.Some(5).ToString(), "Some(5)");
-            Assert.Equal(Optional.Some("bar").ToString(), "Some(bar)");
-            Assert.Equal(Optional.Some<string>(null).ToString(), "Some(null)");
+            Assert.Equal("None", Optional<long>.None.ToString());
+            Assert.Equal("Some(5)", Optional.Some(5).ToString());
+            Assert.Equal("Some(bar)", Optional.Some("bar").ToString());
+            Assert.Equal("Some(null)", Optional.Some<string>(null).ToString());
+        }
+
+        [Fact]
+        public void TestCount()
+        {
+            Assert.Equal(0, Optional<long>.None.Count);
+            Assert.Equal(1, Optional.Some(5).Count);
+            Assert.Equal(1, Optional.Some<string>(null).Count);
+        }
+
+        [Fact]
+        public void TestContains()
+        {
+            Assert.False(Optional<int>.None.Contains(0));
+            Assert.False(Optional<int>.None.Contains(1));
+            Assert.True(Optional.Some(0).Contains(0));
+            Assert.False(Optional.Some(0).Contains(1));
+            Assert.True(Optional.Some<string>(null).Contains(null));
+        }
+
+        [Fact]
+        public void TestIsReadOnly()
+        {
+            Assert.True(Optional<long>.None.IsReadOnly);
+            Assert.True(Optional.Some(5).IsReadOnly);
+            Assert.True(Optional.Some<DummyReference>(null).IsReadOnly);
         }
 
         [Fact]
@@ -227,6 +254,15 @@ namespace Hegedus.Extra.Collections.Test
             Assert.Equal(Optional.Some(9).GetHashCode(), Optional.Some(9).GetHashCode());
             Assert.NotEqual(Optional.Some(9).GetHashCode(), Optional<int>.None.GetHashCode());
             Assert.NotEqual(Optional.Some(8).GetHashCode(), Optional.Some(9).GetHashCode());
+        }
+
+        [Fact]
+        public void TestIsReadonlyCollection()
+        {
+            ICollection<string> singleton = Optional.Some("b");
+            Assert.Equal(true, singleton.IsReadOnly);
+            Assert.ThrowsAny<NotImplementedException>(() => singleton.Remove("a"));
+            Assert.ThrowsAny<NotImplementedException>(() => singleton.Add("a"));
         }
     }
 }

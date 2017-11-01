@@ -55,5 +55,6 @@ namespace Hegedus.Extra.Collections.Collections
         }
 
         public static Optional<V> Get<K, V>(this IDictionary<K, V> dict, K key) => GetOptional(dict, key);
+        public static V Get<K, V>(this IDictionary<K, V> dict, K key, V defaultValue) => GetOptional(dict, key).Or(defaultValue);
     }
 }
