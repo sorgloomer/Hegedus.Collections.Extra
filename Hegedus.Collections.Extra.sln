@@ -7,9 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hegedus.Extra.Collections",
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hegedus.Extra.Collections.Test", "Hegedus.Collections.Extra.Test\Hegedus.Extra.Collections.Test.csproj", "{6090BB02-16E6-4DC4-BF01-2835D6E990CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hegedus.Extra.Collections.Tuples", "Hegedus.Extra.Collections.Tuples\Hegedus.Extra.Collections.Tuples.csproj", "{66877929-AC0F-44B2-8535-4473BF248447}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hegedus.Extra.Collections.Tuples", "Hegedus.Extra.Collections.Tuples\Hegedus.Extra.Collections.Tuples.csproj", "{66877929-AC0F-44B2-8535-4473BF248447}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hegedus.Extra.Collections.Tuples.Test", "Hegedus.Extra.Collections.Tuples.Test\Hegedus.Extra.Collections.Tuples.Test.csproj", "{508D31CE-DF2C-4D59-8A28-F2CDC88D18FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hegedus.Extra.Collections.Tuples.Test", "Hegedus.Extra.Collections.Tuples.Test\Hegedus.Extra.Collections.Tuples.Test.csproj", "{508D31CE-DF2C-4D59-8A28-F2CDC88D18FC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hegedus.Extra.Utils.Test", "Hegedus.Extra.Utils.Test\Hegedus.Extra.Utils.Test.csproj", "{F7E578C1-E25C-4913-A21D-43D5FCB2B990}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hegedus.Extra.Utils", "Hegedus.Extra.Utils\Hegedus.Extra.Utils.csproj", "{3859C73D-D049-4E23-A389-7924D6CCAE03}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +37,14 @@ Global
 		{508D31CE-DF2C-4D59-8A28-F2CDC88D18FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{508D31CE-DF2C-4D59-8A28-F2CDC88D18FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{508D31CE-DF2C-4D59-8A28-F2CDC88D18FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7E578C1-E25C-4913-A21D-43D5FCB2B990}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7E578C1-E25C-4913-A21D-43D5FCB2B990}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7E578C1-E25C-4913-A21D-43D5FCB2B990}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7E578C1-E25C-4913-A21D-43D5FCB2B990}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3859C73D-D049-4E23-A389-7924D6CCAE03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3859C73D-D049-4E23-A389-7924D6CCAE03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3859C73D-D049-4E23-A389-7924D6CCAE03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3859C73D-D049-4E23-A389-7924D6CCAE03}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
